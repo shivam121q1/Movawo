@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -8,9 +9,15 @@ const Img = ({ src, className }) => {
             className={className || ""}
             alt=""
             effect="blur"
-            src={src}
+            src={src || "/fallback-image.jpg"} // Default fallback image
         />
     );
+};
+
+// Define prop types
+Img.propTypes = {
+    src: PropTypes.string.isRequired,
+    className: PropTypes.string,
 };
 
 export default Img;
