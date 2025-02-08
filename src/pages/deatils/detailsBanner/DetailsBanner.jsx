@@ -14,7 +14,7 @@ import PosterFallback from "../../../assets/no-poster.png";
 import { PlayIcon } from "./Playbutton.jsx";
 
 import VideoPopup from "../../../components/videoPopup/VideoPop.jsx";
-import Img from "@/components/LazyLoadImage/Img";
+import Img from "../../lazyLoadImage/Img.jsx";
 
 const DetailsBanner = ( {video,crew }) => {
 
@@ -42,7 +42,7 @@ const { mediaType,id} = useParams();
                     {!!data && (
                         <React.Fragment>
                              <div className="backdrop-img">
-                                <Img src={url.backdrop +data.backdrop_path} /> 
+                                <Img  src={url.backdrop +data.backdrop_path} /> 
                              </div>
                              <div className="opacity-layer"></div>
                              <ContentWrapper>
