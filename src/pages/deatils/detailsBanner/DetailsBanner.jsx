@@ -14,7 +14,7 @@ import PosterFallback from "../../../assets/no-poster.png";
 import { PlayIcon } from "./Playbutton.jsx";
 
 import VideoPopup from "../../../components/videoPopup/VideoPop.jsx";
-import Img from "../../../components/lazyLoadImage/Img.jsx";
+import Img from "@/components/LazyLoadImage/Img";
 
 const DetailsBanner = ( {video,crew }) => {
 
